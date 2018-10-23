@@ -2,93 +2,26 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    background: #faf9f5;
+    border-top: 5px solid $title-color;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    text-align: center;
 
     // Positioning context for the mobile navigation icon
     position: relative;
 }
 
 .site-title {
-    font-size: 26px;
+    font-family: "Playfair Display";
+    font-size: 32px;
     font-weight: 300;
     line-height: 56px;
-    letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
 
     &,
     &:visited {
-        color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
+        color: $title-color;
     }
 }
 
@@ -111,6 +44,10 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+
+    .username {
+        font-size: 80%;
+    }
 }
 
 .footer-col-wrapper {
@@ -178,20 +115,20 @@
 .post-list {
     margin-left: 0;
     list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
 }
 
 .post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
+    color: $brand-color;
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-family: "Playfair Display";
+    font-size: 44px;
+
+    @include media-query($on-palm) {
+        font-size: 1.1em;
+    }
 }
 
 
@@ -204,6 +141,8 @@
 }
 
 .post-title {
+    color: $grey-color;
+    font-family: "Playfair Display";
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -239,4 +178,100 @@
             font-size: 18px;
         }
     }
+}
+
+#post-nav {
+    display: block;
+    padding: 0 2em;
+
+    .next,
+    .previous {
+        float: left;
+        margin: 1rem 0;
+        width: 50%;
+
+        span:after,
+        span:before {
+            border: solid transparent 4px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            margin: 0 0.5rem;
+            top: 0.8em;
+            width: 0;
+        }
+    }
+
+    .next {
+        span:before {
+            border-left: 0;
+            border-right-color: $grey-color;
+        }
+    }
+
+    .previous {
+        text-align: right;
+
+        span:after {
+            border-left-color: $grey-color;
+            border-right: 0;
+        }
+    }
+
+    @include media-query($on-palm) {
+        padding: initial;
+
+        .next,
+        .previous {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    span {
+        color: $brand-color;
+        display: block;
+        font-family: Montserrat;
+        font-size: 0.75rem;
+        font-style: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: $grey-color;
+        font-style: italic;
+    }
+}
+
+
+
+/**
+ * Table of Contents
+ */
+.table-of-contents {
+    h1 {
+        color: $brand-color;
+        display: block;
+        font-family: "Playfair Display";
+        font-size: 44px;
+        text-align: center;
+
+        @include media-query($on-laptop) {
+            font-size: 36px;
+        }
+    }
+
+    span {
+        color: $grey-color;
+    }
+}
+
+
+
+/**
+ * Error pages
+ */
+.error {
+    text-align: center;
 }
