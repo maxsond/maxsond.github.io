@@ -14,7 +14,7 @@ There was a time when education was an inherently expensive process. Books had t
 had so many hours in the day. That's still true, but now we have the next generation of the printing press, called
 the internet. It can make the marginal cost of copying information to new readers effectively free.
 
-In this context, I'm a huge believer in making education free. Not in the sense that we offload it to taxpayers
+In this context, I'm a huge believer in making education free. Not necessarily in the sense that we offload it to taxpayers
 (that's a different conversation), but actually free. Write a textbook and post it online for anyone to download.
 Better yet, skip the textbook and make an interactive open source application that others can fiddle with and learn 
 as they fiddle.
